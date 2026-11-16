@@ -31,6 +31,6 @@
 * **Active Edge-Phase Resynchronization (`Sample_Bit_With_Resync`):** Rather than relying on an open-loop timer that drifts over long messages, the receiver monitors for `PA7` edge transitions prior to each bit center and dynamically realigns the next sample window (`edge_time + 1.5 × bit_period`).
 * **Configurable Bit Rate:** `g_bit_period_us` defaults to `10 µs` (`100 kb/s`) and can be adjusted in the UI from `2 µs` to `10,000 µs` with settings persisted to EEPROM.
 
-# UI & EEPROM Storage (`AT24C64`)
+# UI & EEPROM Storage (AT24C64)
 * **Live Binary-to-ASCII Entry:** Users enter raw bits via the `'0'`/`'1'` buttons; every 8 bits automatically decodes to an ASCII character on Row 1 of the 16x2 LCD while uncommitted bits appear on Row 2.
 * **Persistent Storage:** Custom `AT24C64` layout stores magic header (`MSG\x01`), configured bit period, and up to **8 named message slots** (save, load, delete, full erase, and self-test via the rotary encoder menu).
