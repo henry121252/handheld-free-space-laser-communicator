@@ -1,5 +1,7 @@
 # Handheld Free Space Laser Communicator
 
+V1.1 completed August 28th, 2026
+
 A handheld, battery powered free-space optical communications transceiver capable of transmitting binary data over an unguided laser beam through on-off keying.
 
 A user types binary data with two buttons, the transceiver converts this to plaintext using ASCII. This text can be sent between transceivers.
