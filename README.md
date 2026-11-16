@@ -1,5 +1,8 @@
 # Handheld Free Space Laser Communicator
 
+![The pair of transceivers, fully assembled](IMG_0948.jpeg)
+![The front of the device, showcasing laser diode with adjustable focus and pair of photodiodes](IMG_0947.jpeg)
+
 A handheld, battery powered free-space optical communications transceiver capable of transmitting binary data over an unguided laser beam through on-off keying.
 
 # Specifications
