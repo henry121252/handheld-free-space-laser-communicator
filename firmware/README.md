@@ -23,7 +23,7 @@
 * **Active-Low Direct Register TX:** `Transmit()` drives `PA4` directly via `GPIOA->BCR` and `GPIOA->BSHR` to minimize GPIO latency and match the inverting `MMBT3904` + `IRF540` laser stage (`PA4` LOW = Laser ON).
 * **Frame Format:**
   1. **Preamble:** 100 ON/OFF bit-period toggles to settle the receiver analog front-end.
-  2. **Leader Pulse:** `4 × bit_period` continuous ON pulse (validated in `Expect_Frame_Header()` if held $\ge 2.5 \times \text{bit\_period}$).
+  2. **Leader Pulse:** `4 × bit_period` continuous ON pulse (validated in `Expect_Frame_Header()` if held `>= 2.5 × bit_period`).
   3. **Sync Word:** `0xA5` (MSB-first, with minor bit-error tolerance).
   4. **Length Header:** 16-bit payload byte count (MSB-first).
   5. **Payload:** Up to 8,192 bits (1,024 bytes).
