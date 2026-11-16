@@ -1,0 +1,4 @@
+(fp_lib_table
+	(version 7)
+	(lib (name "CH32V203F8P6") (type "KiCad") (uri "C:/Users/henry/OneDrive/Documents/Kicad schematics and footprints/CH32V203F8P6.pretty") (options "") (descr ""))
+)
