@@ -22,7 +22,10 @@ A handheld, battery powered free-space optical communications transceiver capabl
 # Architecture
 
 * Transmitter: Data payload is output on PA4 of the CH32 at up to ~133kb/s, a level-shifter changes the logic high output from 3V3 to 5V. This drives an IRF540 on the low side of the laser diode. The laser diode has a current limiting resistor built in, so to reduce complexity (especially with the high speed switching of the laser diode), no constant current source is used.
+<img src="Screenshot 2026-11-15 202044.png" width="400" alt="Transmitter schematic">
+
 * Receiver: Two BPW34 photodiodes are located on the front of the device. The photodiode closer to the center of the device only receives ambient light. The photodiode closer to the edge of the device receives the modulated signal in addition to ambient light. Both of the photodiodes' signals are amplified with separate transimpedance amplifiers, then the ambient signal is subtracted from the data. The effect of this is that only the binary signal remains, making it much easier to resolve data. This is then fed into PA7 of the CH32 where the data is read.
+<img src="Screenshot 2026-11-15 201952.png" width="400" alt="Receiver schematic">
 
 # Challenges
 
