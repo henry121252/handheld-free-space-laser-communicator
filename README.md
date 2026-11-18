@@ -3,7 +3,6 @@
 *V1.1 completed August 28th, 2026*
 
 A handheld, battery powered free-space optical communications transceiver capable of transmitting binary data over an unguided laser beam through on-off keying.
-
 A user types binary data with two buttons, the transceiver converts this to plaintext using ASCII. This text can be sent between transceivers.
 
 <p>
@@ -35,5 +34,7 @@ A user types binary data with two buttons, the transceiver converts this to plai
 ## Challenges
 
 * **Ambient light rejection:** The most obvious challenge beginning this project was how to resolve a modulated light input when its riding on some unknown, possibly changing ambient signal. As described above, this was handled through the use of a differential amplifier to subtract the ambient signal off the data.
+
 * **Amplifier resolving power:** The gain on the transimpedance amplifiers determines not only how far the signal can be received from (due to the divergent nature of a laser diode) but also the speed at which data can be received. Too sensitive of an amplifier will saturate and lower the maximum receiver bandwidth. Too low sensitivity will lower the maximum reception distance. Because of these factors, the amplifier had to be finely tuned to maximize both bandwidth and sensitivity.
+  
 * **High speed data transmission and reception (hardware):** Because the device should be capable of high speed communication, any factor slowing down the rise and fall time of the transmitter had to be minimized. This meant lowering parasitic capacitances and constructing a circuit capable of quickly switching a logic level MOSFET using only a CH32 GPIO pin. In my case, the main bottleneck for these rise / fall times was caused by the MCP6007. With a 1MHz GBW and 1.9V/us slew rate, its minimum rise / fall time from 0V to +3V3 is approximately 1.5 microseconds. This meant that at a certain speed, the receiver would not be able to accurately resolve between logic high and low. Experimentation was done adjusting the speed of the transmitter until a bitrate was achieved that allowed for high speed and high accuracy reception. In my case, the minimum bit period is approximately 8 microseconds, translating to ~133kb/s.
