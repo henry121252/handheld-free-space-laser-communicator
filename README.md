@@ -9,7 +9,6 @@ A user types binary data with two buttons, the transceiver converts this to plai
 <p>
   <img src="attachments/IMG_0948.jpeg" width="400" alt="The pair of transceivers, fully assembled">
   <img src="attachments/IMG_0947.jpeg" width="400" alt="The front of the device, showcasing laser diode with adjustable focus and pair of photodiodes">
-  <img src="attachments/IMG_0945.jpeg" width="400" alt="Device viewed from angle">
   <img src="attachments/Screenshot 2026-11-15 202946.png" width="400" alt="Finished PCB layout">
 </p>
 
