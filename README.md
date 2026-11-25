@@ -43,7 +43,9 @@ A user types binary data with two buttons, the transceiver converts this to plai
 ## Additional Content
 
 * A showcase of the transmission and reception of messages
-https://github.com/user-attachments/assets/1137d4bf-9a88-49ec-ac57-38ac7f4fa6b2
+
+<video src="https://github.com/user-attachments/assets/1137d4bf-9a88-49ec-ac57-38ac7f4fa6b2" controls="controls" style="max-width: 100%;">
+</video>
 
 * Hardware on the bottom of the device allows for mounting. This additional stability allows the device to transmit and receive at its maximum range.
 <p>
